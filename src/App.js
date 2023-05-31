@@ -1,16 +1,12 @@
 import React from 'react';
 
 import './App.css';
+import Task1 from './task-1/task-1';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-         Hello :)
-        </p>
-     
-      </header>
+     <Task1/>
     </div>
   );
 }
