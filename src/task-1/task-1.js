@@ -5,6 +5,7 @@ const Task1 = () => {
   const filmsData = getFilmsList();
   const film = filmsData[0];
 
+
   //listowanie elementów
   const lista = ['elo', 'eloo', 'elooo']
 
