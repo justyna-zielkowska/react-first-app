@@ -8,6 +8,7 @@ const DescriptionField = (props) => {
         <p> 
             <span className={styles.boldText}>{props.name}</span>{props.value}
         </p>
+        {props.hideline ? null : <hr/>}
         </>
     )
   }
@@ -27,7 +28,7 @@ const Task4 = () => {
             
         <DescriptionField name="Genre: " value={film.Genre}/>
         <DescriptionField name="Director: " value={film.Director}/>
-        <DescriptionField name="Actors: " value={film.Actors}/>
+        <DescriptionField name="Actors: " value={film.Actors} hideline/>
  
         </div>
         <br></br>
