@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./module.css"
+import styles from "./FilmList.module.css"
 import FilmItem from './FilmItem';
 
 // const DescriptionField = (props) => {

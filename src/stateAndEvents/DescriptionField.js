@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./module.css"
+import styles from "./DescriptionFiled.module.css"
 
 const DescriptionField = ({name, value}) => {
     return (

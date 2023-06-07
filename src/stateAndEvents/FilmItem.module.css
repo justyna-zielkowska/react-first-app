@@ -1,0 +1,16 @@
+.filmItem {
+    background-color: #f1f1f1;
+    box-shadow: #818181 0 0 10px;
+    padding: 16px;
+    margin-bottom: 32px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.filmItem img {
+    width: 120px;
+    margin-right: 20px;
+    border-radius: 6px;
+    box-shadow: #818181 0 0 10px;
+    align-self: flex-start;
+}

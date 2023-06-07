@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from "./module.css";
+import styles from "./FilmItem.module.css";
 import DescriptionField from './DescriptionField';
 
 
@@ -10,12 +10,12 @@ const FilmItem = ({film}) => {
 
     return (
 
-        <div style={{cursor: "pointer"}} className={styles.FilmItem} onClick={() => setShowMore(!showMore)}>
+        <div style={{cursor: "pointer"}} className={styles.filmItem} onClick={() => setShowMore(!showMore)}>
             <img alt="poster" src={film.Poster}/>
             <div>
                 <h2>
                     {film.Title}
-                    <span className={styles.filmYear}> {film.Year}</span>
+                    <span style={{fontSize: 14}}> {film.Year}</span>
                 </h2>
                 <DescriptionField name="Genre: " value={film.Genre}/>
                 <DescriptionField name="Director: " value={film.Director}/>
