@@ -1,18 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import FilmLibrary from './stateAndEvents/FilmsLibrary';
+// import FilmLibrary from './stateAndEvents/FilmsLibrary';
+
+const FormExample = () => {
+
+  const [formValue, setFormValue] = useState({
+
+    firstname: "",
+    surname: ""
+
+    });
 
 
+    const handleChange = (event) => {
 
-const App = () => {
+      const newValue = {
+         ... formValue,
+        [event.target.name]: event.target.value
+      }
+        setFormValue(newValue)
+    }
+
   return (
-    <div className="App">
+    <div>
+      <form>
+      <label>Name: </label>
+      <input name="firstname" value={formValue.name} onChange={handleChange}/>
+      <label>Surname: </label>
+      <input name="surname" value={formValue.surname} onChange={handleChange}/>
+      </form>
 
-    <FilmLibrary/>
-    
+      <p>{formValue.firstname}</p>
+      <p>{formValue.surname}</p>
+
     </div>
-  );
+  )
 }
 
-export default App
+export default FormExample;
+
+
+// const App = () => {
+//   return (
+//     <div className="App">
+
+//     
+    
+//     </div>
+//   );
+// }
+
+// export default App
 
