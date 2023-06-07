@@ -1,54 +1,55 @@
 import React, { useState } from 'react';
 import './App.css';
-// import FilmLibrary from './stateAndEvents/FilmsLibrary';
-
-const FormExample = () => {
-
-  const [formValue, setFormValue] = useState({
-
-    firstname: "",
-    surname: ""
-
-    });
+import FilmLibrary from './stateAndEvents/FilmsLibrary';
 
 
-    const handleChange = (event) => {
+// const FormExample = () => {
 
-      const newValue = {
-         ... formValue,
-        [event.target.name]: event.target.value
-      }
-        setFormValue(newValue)
-    }
+//   const [formValue, setFormValue] = useState({
 
-  return (
-    <div>
-      <form>
-      <label>Name: </label>
-      <input name="firstname" value={formValue.firstname} onChange={handleChange}/>
-      <label>Surname: </label>
-      <input name="surname" value={formValue.surname} onChange={handleChange}/>
-      </form>
+//     firstname: "",
+//     surname: ""
 
-      <p>Name: {formValue.firstname}</p>
-      <p>Surname: {formValue.surname}</p>
-
-    </div>
-  )
-}
-
-export default FormExample;
+//     });
 
 
-// const App = () => {
+//     const handleChange = (event) => {
+
+//       const newValue = {
+//          ... formValue,
+//         [event.target.name]: event.target.value
+//       }
+//         setFormValue(newValue)
+//     }
+
 //   return (
-//     <div className="App">
+//     <div>
+//       <form>
+//       <label>Name: </label>
+//       <input name="firstname" value={formValue.firstname} onChange={handleChange}/>
+//       <label>Surname: </label>
+//       <input name="surname" value={formValue.surname} onChange={handleChange}/>
+//       </form>
 
-//     
-    
+//       <p>Name: {formValue.firstname}</p>
+//       <p>Surname: {formValue.surname}</p>
+
 //     </div>
-//   );
+//   )
 // }
 
-// export default App
+// export default FormExample;
+
+
+const App = () => {
+  return (
+    <div className="App">
+
+    
+    <FilmLibrary/>
+    </div>
+  );
+}
+
+export default App
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import FilmList from './FilmList';
 import { getFilmsList } from "../filmsData";
-import styles from "./module.css";
+
 
 
 const FilmLibrary = () => {

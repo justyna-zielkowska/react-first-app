@@ -1,27 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from "./FilmList.module.css"
 import FilmItem from './FilmItem';
 
-// const DescriptionField = (props) => {
-//     return (
-//         <>
-//         <p> 
-//             <span className={styles.boldText}>{props.name}</span>{props.value}
-//         </p>
-//         {props.hideline ? null : <hr/>}
-//         </>
-//     )
-//   }
-  
+
 
 const FilmList = ({films, title}) => {
  
+const [filter, setFilter] = useState("")
+
+const filteredList = films.filter(film => film.Title.toLowerCase().includes(filter.toLowerCase()))
+
+
   return (
     <div>
+
+     
       <h2>{title}</h2>
+      <label>Filter list:</label>
+      <input value={filter} onChange={(event) => setFilter(event.target.value)}/>
+      <p></p>
       <div className={styles.filmsList}>
-        {films.map((film) => (
-          <FilmItem film={film}/>
+        {filteredList.map((film) => (
+          <FilmItem key={film.Title} film={film}/>
         ))}
       </div>
     </div>
