@@ -10,7 +10,7 @@ const FilmItem = ({film}) => {
 
     return (
 
-        <div className={styles.FilmItem}>
+        <div style={{cursor: "pointer"}} className={styles.FilmItem} onClick={() => setShowMore(!showMore)}>
             <img alt="poster" src={film.Poster}/>
             <div>
                 <h2>
@@ -21,7 +21,7 @@ const FilmItem = ({film}) => {
                 <DescriptionField name="Director: " value={film.Director}/>
                 <DescriptionField name="Actors: " value={film.Actors}/>
 
-                <button onClick={() => setShowMore(!showMore)}> {showMore ? "Show less" : "Show more"}</button>
+           
                 {showMore && 
                     
                     (<div>
