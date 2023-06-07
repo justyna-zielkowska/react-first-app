@@ -25,13 +25,13 @@ const FormExample = () => {
     <div>
       <form>
       <label>Name: </label>
-      <input name="firstname" value={formValue.name} onChange={handleChange}/>
+      <input name="firstname" value={formValue.firstname} onChange={handleChange}/>
       <label>Surname: </label>
       <input name="surname" value={formValue.surname} onChange={handleChange}/>
       </form>
 
-      <p>{formValue.firstname}</p>
-      <p>{formValue.surname}</p>
+      <p>Name: {formValue.firstname}</p>
+      <p>Surname: {formValue.surname}</p>
 
     </div>
   )
