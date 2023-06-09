@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import FilmLibrary from './stateAndEvents/FilmsLibrary';
+import FilmsLibrary from './stateAndEvents/FilmsLibrary';
 
 
 // const FormExample = () => {
@@ -46,7 +46,7 @@ const App = () => {
     <div className="App">
 
     
-    <FilmLibrary/>
+    <FilmsLibrary/>
     </div>
   );
 }

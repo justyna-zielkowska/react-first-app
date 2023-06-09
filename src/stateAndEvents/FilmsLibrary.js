@@ -1,44 +1,43 @@
 import React, { useState } from 'react';
-import FilmList from './FilmList';
-import { getFilmsList } from "../filmsData";
+import { getFilmsList } from '../filmsData';
+import FilmsList from "./FilmList";
 import FilterInput from './FilterInput';
-
+import AddFilm from './AddFilm';
 
 const filmsData = getFilmsList();
 
-const FilmLibrary = () => {
-
+const FilmsLibrary = () => {
   const [sortAscending, setSortAscending] = useState(true);
-  const [filteredList, setFilteredList] = useState(filmsData);
+  const [filters, setFilters] = useState({
+    byTitle: '',
+    byYear: '',
+  })
+  const [filmsAddedByUser, setFilmsAddedByUser] = useState([]);
 
-    const submitTitleFilter = (filterValue) => {
-        setFilteredList(filmsData.filter(film => film.Title.toLowerCase().includes(filterValue.toLowerCase())))
-    }
+  const allFilms = [...filmsData, ...filmsAddedByUser];
+  
 
-    const submitYearFilter = (filterValue) => {
-      setFilteredList(filmsData.filter(film => film.Year.toLowerCase().includes(filterValue.toLowerCase())))
-  }
-
-
-  const sortedData = [...filteredList].sort((film, nextFilm) => sortAscending ? (film.Year - nextFilm.Year) : (nextFilm.Year - film.Year))
-
+  const filmSortedByTitle = allFilms.filter(
+    film => film.Title.toLowerCase().includes(filters.byTitle.toLowerCase())
+  );
+  const filmSortedByYear = filmSortedByTitle.filter(
+    film => film.Title.toLowerCase().includes(filters.byYear.toLowerCase())
+  );
+  const sortedFilms = [...filmSortedByYear].sort(
+    (film, nextFilm) => sortAscending ? (film.Year - nextFilm.Year) : (nextFilm.Year - film.Year)
+  );
 
   return (
-    <div>
-     <h1>Film Library App</h1>
-     <FilterInput onFilterSave={submitTitleFilter}/>
-     <FilterInput onFilterSave={submitYearFilter}/>
-     <p>Sort:</p>
-     <button onClick={() => setSortAscending(!sortAscending)}>{sortAscending ? "Ascending" : "Descending"}</button>
-     <div>
-     <FilmList title={"Film list:"} films={sortedData}/>
-
-     <input/>
-
-     </div>
-    </div>
+    <>
+      <h1>Films Library</h1>
+      <FilterInput label="Filter by title" onFilterSave={(value) => setFilters({ ...filters, byTitle: value })} />
+      <FilterInput label="Filter by year" onFilterSave={(value) => setFilters({ ...filters, byYear: value })} />
+      <p>Sort:</p>
+      <button onClick={() => setSortAscending(!sortAscending)}>{sortAscending ? 'Ascending' : 'Descending'}</button>
+      <FilmsList title="Films list:" films={sortedFilms} />
+      <AddFilm onAdd={(values) => setFilmsAddedByUser([...filmsAddedByUser, values])} />
+    </>
   )
 }
-
-export default FilmLibrary;
+export default FilmsLibrary;
 
