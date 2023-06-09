@@ -7,11 +7,18 @@ import React, { useState } from 'react';
 const FilterInput = ({onFilterSave}) => {
 
     const [filter, setFilter] = useState("");
+
+    //wyczyszczenie inputa po kliknieciu w button
+
+    const handleSave = () => {
+        onFilterSave(filter);
+        setFilter("")
+    }
   
         return(
         <div>
             <input value={filter} onChange={(event) => setFilter(event.target.value)}/>
-            <button type="submit" onClick={() => onFilterSave(filter)}>Filter</button>
+            <button type="submit" onClick={handleSave}>Filter</button>
         </div>
         )
     };

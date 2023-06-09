@@ -33,6 +33,8 @@ const FilmLibrary = () => {
      <div>
      <FilmList title={"Film list:"} films={sortedData}/>
 
+     <input/>
+
      </div>
     </div>
   )
