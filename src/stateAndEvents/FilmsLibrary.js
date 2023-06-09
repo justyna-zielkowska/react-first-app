@@ -4,22 +4,24 @@ import { getFilmsList } from "../filmsData";
 
 
 
+
 const FilmLibrary = () => {
   const filmsData = getFilmsList();
 
   const [sortAscending, setSortAscending] = useState(true);
 
-  filmsData.sort((film, nextFilm) => sortAscending ? (film.Year - nextFilm.Year) : (nextFilm.Year - film.Year))
+  const sortedData = [...filmsData].sort((film, nextFilm) => sortAscending ? (film.Year - nextFilm.Year) : (nextFilm.Year - film.Year))
 
+console.log(sortedData)
   return (
     <div>
      <h1>Film Library App</h1>
      <p>Sort:</p>
      <button onClick={() => setSortAscending(!sortAscending)}>{sortAscending ? "Ascending" : "Descending"}</button>
-   
+     <div>
      <FilmList title={"Film list:"} films={filmsData}/>
- 
-     
+
+     </div>
     </div>
   )
 }
