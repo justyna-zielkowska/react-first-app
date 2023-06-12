@@ -11,6 +11,8 @@ import HomePage from './pages/homepage';
 import Contact from './pages/contact';
 import ShopPage from './pages/shopPage';
 import ProductPage from './pages/productPage';
+import OurProducts from './pages/ourProducts';
+import Cos from './pages/cos';
 
 const AppWithRouting = () => {
     return (
@@ -21,7 +23,9 @@ const AppWithRouting = () => {
                 <Routes>
                     <Route path="/shop/:productId" element={<ProductPage />}/> 
                     <Route path="/shop" element={<ShopPage />}/>
+                    <Route path="/ourProducts" element={<OurProducts />}/>
                     <Route path="/contact" element={<Contact />}/>
+                    <Route path="/cos" element={<Cos />}/>
                     <Route path="/" element={<HomePage />}/>
                 </Routes>
             </div>

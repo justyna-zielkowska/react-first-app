@@ -28,8 +28,8 @@ const FilmList = ({films, title}) => {
             
         <DescriptionField name="Genre: " value={film.Genre}/>
         <DescriptionField name="Director: " value={film.Director}/>
-        <DescriptionField name="Actors: " value={film.Actors} hideline/>
- 
+        <DescriptionField name="Actors: " value={film.Actors} hideline/>    
+        
         </div>
         <br></br>
       </div>)}

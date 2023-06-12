@@ -11,6 +11,8 @@ const FilmsList = ({films, title}) => {
           <FilmItem key={film.Title} film={film}/>
         ))}
       </div>
+
+      <button onClick={() => window.scrollTo(0,0)}>Scroll to top</button>
     </>
   )
 }
