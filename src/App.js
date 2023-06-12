@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import FilmsLibrary from './stateAndEvents/FilmsLibrary';
+import AppWithRouting from './routing/AppWithRouting';
 
 
 // const FormExample = () => {
@@ -46,7 +47,7 @@ const App = () => {
     <div className="App">
 
     
-    <FilmsLibrary/>
+    <AppWithRouting/>
     </div>
   );
 }
