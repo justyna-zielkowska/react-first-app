@@ -12,7 +12,7 @@ import Contact from './pages/contact';
 import ShopPage from './pages/shopPage';
 import ProductPage from './pages/productPage';
 import OurProducts from './pages/ourProducts';
-import Cos from './pages/cos';
+import Colaboration from './pages/Colaboration';
 
 const AppWithRouting = () => {
     return (
@@ -25,7 +25,7 @@ const AppWithRouting = () => {
                     <Route path="/shop" element={<ShopPage />}/>
                     <Route path="/ourProducts" element={<OurProducts />}/>
                     <Route path="/contact" element={<Contact />}/>
-                    <Route path="/cos" element={<Cos />}/>
+                    <Route path="/colaboration" element={<Colaboration />}/>
                     <Route path="/" element={<HomePage />}/>
                 </Routes>
             </div>
