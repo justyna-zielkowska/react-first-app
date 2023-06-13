@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
+import {useNavigate} from "react-router-dom";
 import styles from "./FilmItem.module.css";
 import DescriptionField from './DescriptionField';
-
+import {Link} from "react-router-dom";
 
 const FilmItem = ({film}) => {
 
     const [showMore, setShowMore] = useState(false);
+
+    // const navigate = useNavigate();
+
+    // const changeRoute = () => {
+    //   navigate('/FilmsPage')
+    // }
 
 
     return (
@@ -20,6 +27,11 @@ const FilmItem = ({film}) => {
                 <DescriptionField name="Genre: " value={film.Genre}/>
                 <DescriptionField name="Director: " value={film.Director}/>
                 <DescriptionField name="Actors: " value={film.Actors}/>
+               
+                <Link to={`/FilmPage/${film.Id}`}>Go to Film Page</Link>
+            
+             
+           
 
            
                 {showMore && 
@@ -29,7 +41,7 @@ const FilmItem = ({film}) => {
                     <DescriptionField name="Production: " value={film.Production}/>
                     <DescriptionField name="Runtime: " value={film.Runtime}/>
                     </div>)}
-
+                    {/* <button onClick={changeRoute}>Go to Film Page</button> */}
             </div>
 
 
