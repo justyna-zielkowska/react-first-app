@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import FilmsLibrary from './stateAndEvents/FilmsLibrary';
-import Routing from './stateAndEvents/Routing';
+// import FilmsLibrary from './stateAndEvents/FilmsLibrary';
+// import Routing from './stateAndEvents/Routing';
+import FetchExample from './appArchitecture/fetchExample.';
 
 
 // const FormExample = () => {
@@ -47,10 +48,10 @@ const App = () => {
     <div className="App">
 
     
-    <Routing/>
+    <FetchExample/>
     </div>
   );
 }
 
-export default App
+export default App;
 
