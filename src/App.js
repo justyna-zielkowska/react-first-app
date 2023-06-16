@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 // import FilmsLibrary from './stateAndEvents/FilmsLibrary';
-// import Routing from './stateAndEvents/Routing';
-import FetchExample from './appArchitecture/fetchExample.';
+// // import Routing from './stateAndEvents/Routing';
+// import FetchExample from './appArchitecture/fetchExample.';
+import Appp from './contextExample/App';
 
 
 // const FormExample = () => {
@@ -48,7 +49,7 @@ const App = () => {
     <div className="App">
 
     
-    <FetchExample/>
+   <Appp/>
     </div>
   );
 }
