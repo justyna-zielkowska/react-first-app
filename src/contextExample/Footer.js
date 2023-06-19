@@ -11,9 +11,11 @@ const style = {
 
 const Footer = () => {
 
-const theme = useContext(ThemeContext)
+    const {themeDark, themeLight, isDarkMode} = useContext(ThemeContext);
     return (
-        <div style={{...style, backgroundColor: theme.colors.brandPrimary}}>
+        <div style={{...style, backgroundColor: isDarkMode
+            ? themeDark.colors.backgroundColor
+            : themeLight.colors.backgroundColor}}>
            Footer
         </div>
     )

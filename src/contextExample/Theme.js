@@ -1,7 +1,15 @@
-export const theme = {
+export const themeLight = {
     colors: {
-        textColors: "#ff0000",
-        backgroundColor: "#C0C0C0",
+        textColor: "#808080",
+        backgroundColor: "#FFFDE4",
+        brandPrimary: "#808080"
+    }
+};
+
+export const themeDark = {
+    colors: {
+        textColor: "#808080",
+        backgroundColor: "#1C2833",
         brandPrimary: "#808080"
     }
 }

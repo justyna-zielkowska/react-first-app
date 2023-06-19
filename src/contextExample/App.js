@@ -5,21 +5,21 @@ import Main from "./Main";
 import Content from "./Content";
 import Article from "./Article";
 import Footer from "./Footer";
-import { theme } from "./Theme";
+import { themeDark, themeLight } from "./Theme";
 import { ThemeContext } from "./ThemeContext";
 
 const Appp = () => {
 
-
+    const [isDarkMode, setIsDarkMode] = useState(false)
 
     return (
         <>
-        <ThemeContext.Provider value={theme}>
+        <ThemeContext.Provider value={{themeDark, themeLight, isDarkMode}}>
         <Header>
             <Navigation/>
-            {/* <h1 style={{paddingTop: "21px"}}>CONTEXT</h1> */}
         </Header>
         <Main>
+        <button onClick={()=>setIsDarkMode(!isDarkMode)}>Toggle dark mode</button>
             <Content>
                 <Article/>
             </Content>
