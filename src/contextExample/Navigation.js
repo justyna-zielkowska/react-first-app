@@ -1,27 +1,24 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "./ThemeContext";
+import React from "react";
 
 const style = {
     display: "flex",
-    alignItems: "center",
+    alignItems: "center", 
     justifyContent: "space-around",
     listStyle: "none",
     margin: "0 auto"
 }
 
 const Navigation = () => {
-
-
-    const theme = useContext(ThemeContext)
+ 
 
     return (
-        <div>
-         <ul style={{...style, backgroundColor: theme.colors.brandPrimary}}>
+    
+         <ul style={style}>
           <li>Link</li>
           <li>Link</li>
           <li>Link</li>
          </ul>
-        </div>
+    
     )
 
 };

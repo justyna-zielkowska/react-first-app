@@ -1,11 +1,13 @@
 import React from "react";
 
-const Main = () => {
+const Main = ({children}) => {
 
 
     return (
         <div>
-Hej
+            {children}
+            <p>lorem</p>
+            lorem
         </div>
     )
 

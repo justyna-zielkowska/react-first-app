@@ -1,18 +1,21 @@
-import React from "react";
+import React, {useContext} from "react";
+import { ThemeContext } from "./ThemeContext";
+
 
 const style = {
 width: "100wv",
 height: "50px",
 textAlign: "center",
-buddlingTop: "20px"
+paddingTop: "20px"
 }
 
-const Header = () => {
+const Header = ({children}) => {
 
+    const theme = useContext(ThemeContext);
 
     return (
-        <div style={style}>
-         Hello    
+        <div style={{...style, backgroundColor: theme.colors.brandPrimary}}>
+         {children}    
         </div>
     )
 

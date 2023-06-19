@@ -1,11 +1,12 @@
 import React from "react";
 
-const Content = () => {
+const Content = ({children}) => {
 
 
     return (
         <div>
-           
+           {children}
+           lorem ipsum
         </div>
     )
 

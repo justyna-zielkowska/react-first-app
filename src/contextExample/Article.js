@@ -4,11 +4,10 @@ const Article = () => {
 
 
     return (
-        <div>
-            Lorem ipsum    
+        <div style={{height: "500px"}}>
+           Context
         </div>
     )
 
 };
-
 export default Article;

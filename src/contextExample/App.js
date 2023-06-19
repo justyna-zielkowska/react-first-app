@@ -17,6 +17,7 @@ const Appp = () => {
         <ThemeContext.Provider value={theme}>
         <Header>
             <Navigation/>
+            {/* <h1 style={{paddingTop: "21px"}}>CONTEXT</h1> */}
         </Header>
         <Main>
             <Content>
