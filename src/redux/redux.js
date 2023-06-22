@@ -85,4 +85,14 @@ const reducer = (state = defaultState, action) => {
 
 const store = createStore(reducer);
 
-console.log(getState())
+console.log(getState());
+
+// 8 dispatch
+
+store.dispatch({
+    type: "ADD",
+    payload:{id: 1, message: "cos do zrobienia"}
+});
+
+//uzywajac kreatora akcji
+store.dispatch(addTodo("Cos do zrobienia z kreatorem akcji"))
